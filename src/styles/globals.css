@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
+
+.apartment-cart:hover .slick-prev,
+.apartment-cart:hover .slick-next {
+  display: block !important;
+}
+
+/* search */
+
+.white-box {
+  height: 0;
+  margin-top: -1px;
+}
+
+.white-box.animation-on {
+  animation: white-box-animation 250ms ease;
+  height: 75px;
+}
+
+.white-box.animation-off {
+  height: 0;
+  animation: white-box-animation-remove 250ms ease;
+}
+
+@keyframes white-box-animation {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 75px;
+  }
+}
+
+@keyframes white-box-animation-remove {
+  0% {
+    height: 70px;
+  }
+  100% {
+    height: 0;
+  }
+}
+.semi_header_inactive {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translate(-60%, -50%) scale(0.4);
+}
+
+.semi_header_active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.header_layout_search_inactive {
+  scale: 1 1;
+  transform-origin: top left;
+  visibility: visible;
+  top: 50%;
+  opacity: 1;
+  transition: all .3s;
+}
+.header_layout_search_active {
+  z-index: -1;
+  scale: 2.42 1;
+  transform-origin: top left;
+  visibility: hidden;
+  opacity: 0;
+  top: calc(50% + 50px) !important;
+  transition: all .3s;
+}
+
+.header_layout_search_detail_inactive {
+  z-index: -1;
+  scale: 0.42;
+  transform-origin: top left;
+  visibility: hidden;
+  opacity: 0;
+  top: 50%;
+  transition: all .3s;
+}
+
+.header_layout_search_detail_active {
+  scale: 1;
+  transform-origin: top left;
+  visibility: visible;
+  opacity: 1;
+  top: calc(50% + 70px) !important;
+  transition: all .3s;
+}
+
+/* Slick-Slider */
+.slick-prev {
+  display: none !important;
+  left: -10px !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  top: 10rem !important;
+  z-index: 999 !important;
+  font-size: 30px !important;
+}
+
+.slick-next {
+  display: none !important;
+  right: -10px !important;
+  width: 5rem !important;
+  height: 5rem !important;
+  top: 10rem !important;
+  z-index: 99999 !important;
+  font-size: 30px !important;
+}
+
+.slick-dots {
+  bottom: 10px !important;
+}
+.slick-dots li {
+  margin: 0 !important;
+}
+.slick-dots li button:before {
+  color: #fff !important;
+  font-size: 7px;
+  width: 16px !important;
+  height: 16px !important;
+  opacity: 0.5 !important;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+}
+
+/* ReactTabs */
+.react-tabs {
+  width: 600px;
+}
+
+.react-tabs__tab-list {
+  width: 80% !important;
+  display: flex;
+  margin: auto !important;
+  justify-content: space-between;
+  border-bottom: none !important;
+}
+
+.react-tabs__tab {
+  display: block !important;
+  width: 50% !important;
+  text-align: center !important;
+  border: none !important;
+  bottom: 0 !important;
+  list-style: none;
+  padding: auto !important;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  background: #ff385c !important;
+  border-color: none !important;
+  color: #fff !important;
+  border-radius: 20px !important;
+}
+
+/* MapBox */
+.mapboxgl-popup {
+  max-width: 300px !important;
+}
+.mapboxgl-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.mapboxgl-popup-close-button {
+  left: 20px !important;
+  top: 20px !important;
+  color: #fff !important;
+  font-size: 24px !important;
+  background: #00000080 !important;
+  border-radius: 100% !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+/* DateRangePicker */
+.rdrDefinedRangesWrapper {
+  display: none;
+}
+.rdrDayToday .rdrDayNumber span:after {
+  background: #ff385c !important;
+}
+
+/* category */
+.category::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.category {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
